@@ -24,12 +24,14 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # ----------------------------------------------------------------------
 #
-# Author: Joe Block <jpb@unixorn.net>
+# Author: Joe Block <jpb@numenta.com>
+
 """
 Helper script to read & print EC2 tags for the running instance.
 """
 
 import argparse
+import logging
 import os
 
 from boto import utils, ec2
@@ -83,7 +85,7 @@ def loadTag(connection, instanceId, tagname="Name"):
     tagValue = tags[0].value
   else:
     tagValue = None
-    logging.error("No %s tag for %s in %s", tagname, region, instance_id)
+    logging.error("No %s tag for %s", tagname, instanceId)
   return tagValue
 
 

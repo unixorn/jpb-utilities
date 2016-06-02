@@ -9,4 +9,4 @@ Wrote this one at work, but they've allowed me to Open Source it, so it's under 
 * An AWS IAM role or user account with permission to read EC2 tags
 
 ## Installation
-* Create an IAM role or account with EC2 tag reading permission. Use the supplied allow-ec2-tag-reading.json file to create a policy you can attach to the account/role to grant the necessary access rights.
+* Create an IAM role or account with EC2 tag reading permission. You can use the supplied `allow-ec2-tag-reading.json` file to create a policy you can attach to the account or role to grant the necessary access rights.
